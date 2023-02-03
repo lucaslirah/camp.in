@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>camp.in</title>
+
+  
+</head>
+
+<body>
+
+  <div class="page">    
+
+    <div class="img-logo">
+      <a href="#"><img src="./assets/logo.svg" alt="logo camp-in"></a>
+    </div>
+
+    <form id="form-camp.in" action="">
+
+      <header>
+        <div class="head-wrapper">
+          <img src="./assets/log-in.svg" alt="seta amarela para a direita">
+          <h1>Faça seu login</h1>
+        </div>
+        <p>Entre com suas informaçãoes de cadastro.</p>
+      </header>
+      
+      <div class="input-wrapper">
+        <label for="email">E-mail</label>
+        <input required autofocus type="email" name="email" id="email" placeholder="Digite seu e-mail">
+      </div>
+
+      <div class="input-wrapper">
+        <label for="password">Senha</label>
+        <input required type="password" name="password" class="password" placeholder="Digite sua senha">
+        <img src="./assets/eye.svg" alt="olho do campo senha" class="passEye">
+      </div>
+
+      <div class="input-wrapper-check">
+        <input type="checkbox" name="checkbox" id="remember-me">
+        <label for="remember-me">Lembre-me</label>
+        <a href="#"><strong>Esqueci a minha senha</strong></a>
+      </div>
+
+      <button type="submit" value="login-camp">
+        ENTRAR
+      </button>
+      
+      <footer>
+        <p>Não tem uma conta?</p>&nbsp;<a href="#"><strong>Registre-se</strong></a>
+      </footer>
+    </form>
+
+  </div>
+
+  <!-- fazer o olhinho do input password mudar quando mostrar e ocultar o que for digitado -->
+  <script>
+    const passWord = document.querySelector('.password');
+    const passEye =document.querySelector('.passEye');
+  
+    passEye.onclick = ()  =>
+    {
+      if (passWord.type == 'password')
+      {
+        passWord.type = 'text'
+        passEye.src = 'assets/eye-yellow.svg'
+      }
+      else{
+        passWord.type = 'password'
+        passEye.src = 'assets/eye.svg'
+      }
+    }
+  </script>
+
+</body>
+
+
+</html>
